@@ -2,21 +2,21 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: java-demo-ingress
+  name: demo-ingress
   namespace: jenkins
 
 spec:
   ingressClassName: nginx
 
   rules:
-    - host: java.local
+    - host: demo.local
       http:
         paths:
-          - path: /
+          - path: /images
             pathType: Prefix
             backend:
               service:
-                name: java-service
+                name: images-service
                 port:
                   number: 80
 

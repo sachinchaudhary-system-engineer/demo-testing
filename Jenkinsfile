@@ -13,7 +13,7 @@ pipeline {
         stage("Checkout") {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/sachinchaudhary-system-engineer/ingress-project.git'
+                    url: 'https://github.com/sachinchaudhary-system-engineer/demo-testing.git'
             }
         }
 

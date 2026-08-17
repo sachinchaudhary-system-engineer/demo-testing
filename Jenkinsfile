@@ -70,8 +70,8 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh '''
-                    kubectl apply -f K8s/namespace-1.yaml
-                    kubectl apply -f K8s/
+                    kubectl apply -f k8s/namespace-1.yaml
+                    kubectl apply -f k8s/
 
                     kubectl set image deployment/demo-deployment \
                         demo-container=${USER_DOCKER}/${APP_NAME}:${IMAGE_TAG} -n jenkins

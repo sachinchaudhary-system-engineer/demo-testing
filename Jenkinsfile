@@ -67,6 +67,13 @@ pipeline {
             }
         }
 
+        stage('Manual Approval') {
+            steps {
+                input message: 'Approve this image for Docker Hub?', 
+                      ok: 'Approve'
+            }
+        }
+
         stage("Deploy") {
             steps {
                 sh '''

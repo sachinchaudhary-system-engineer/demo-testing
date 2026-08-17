@@ -70,7 +70,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh '''
-                    kubectl apply -f K8s/namespace.yaml
+                    kubectl apply -f K8s/namespace-1.yaml
                     kubectl apply -f K8s/
 
                     kubectl set image deployment/demo-deployment \
